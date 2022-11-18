@@ -17,7 +17,7 @@ class KittensController < ApplicationController
 
     if @kitten.save
       flash[:notice] = 'You added a new kitten!'
-      redirect_to kitten_path(params[:id])
+      redirect_to kitten_path(@kitten)
     else  
       render :new, status: :unprocessable_entity
     end  

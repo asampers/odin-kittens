@@ -1,10 +1,10 @@
 <%= render 'kitten' %>
 
 <div>
-  <%= link_to "Edit this kitten", edit_kitten_path(@kitten) %>
-  <%= link_to "Back to Main", root_path %>
-
-  <%= link_to "Delete this Kitten", destroy_kitten_path(@kitten) %>
+  <%= link_to "Edit this kitten", edit_kitten_path(@kitten) %> |
+  <%= link_to "Back to Main", root_path %> |
+  <%= link_to "Delete this Kitten", kitten_path(@kitten), data: { 
+          turbo_method: :delete, turbo_confirm: "Do you really want to delete this kitten?" } %>
 </div>
 
 
