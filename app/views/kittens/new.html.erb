@@ -1,0 +1,17 @@
+<h1>Add a Kitten</h1>
+
+<% if @kitten.errors.any? %>
+  <h3><%= pluralize(@kitten.errors.count, 'error') %> prohibited this kitten from being saved: </h3>
+
+  <ul>
+    <% @kitten.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>  
+  </ul>
+<% end %> 
+
+<% render 'form' %>
+
+<div>
+  <%= link_to "Back to Main", root_path %>
+</div>

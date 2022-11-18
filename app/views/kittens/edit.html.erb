@@ -1,0 +1,9 @@
+<h1>Edit Kitten</h1>
+
+<%= render "form", kitten: @kitten %>
+
+<div>
+  <%= link_to "Back to Main", root_path %>
+
+  <%= link_to "Delete this Kitten", destroy_kitten_path(@kitten) %>
+</div>
