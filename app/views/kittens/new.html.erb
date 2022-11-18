@@ -1,5 +1,4 @@
 <h1>Add a Kitten</h1>
-<%= render partial: 'form' %>
 
 <% if @kitten.errors.any? %>
   <h3><%= pluralize(@kitten.errors.count, 'error') %> prohibited this kitten from being saved: </h3>
@@ -9,8 +8,9 @@
       <li><%= msg %></li>
     <% end %>  
   </ul>
-<% end %> 
-
+<% end %>
+<p></p> 
+<%= render partial: 'form' %>
 
 <p></p>
 <div>
